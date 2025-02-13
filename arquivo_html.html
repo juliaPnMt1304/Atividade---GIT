@@ -57,6 +57,50 @@
         .btn:hover {
             background-color: #45a049;
         }
+
+        /* Estilização do cubo 3D */
+        .container-cubo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            perspective: 600px;
+        }
+       
+        .cubo {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            transform-style: preserve-3d;
+            animation: girar 4s linear infinite;
+        }
+ 
+        .face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+ 
+        /* Posições das faces do cubo */
+        .front  { transform: translateZ(50px); }
+        .back   { transform: rotateY(180deg) translateZ(50px); }
+        .left   { transform: rotateY(-90deg) translateZ(50px); }
+        .right  { transform: rotateY(90deg) translateZ(50px); }
+        .top    { transform: rotateX(90deg) translateZ(50px); }
+        .bottom { transform: rotateX(-90deg) translateZ(50px); }
+ 
+        @keyframes girar {
+            from { transform: rotateX(0deg) rotateY(0deg); }
+            to   { transform: rotateX(360deg) rotateY(360deg); }
+        }
     </style>
 </head>
 <body>
@@ -87,7 +131,18 @@
         </ul>
     </section>
 
-    <a href="login_page.html" class="btn">Cadastrar</a>
+  <a href="login_page.html" class="btn">Cadastrar</a>
+    <!-- Cubo 3D aqui -->
+    <div class="container-cubo">
+        <div class="cubo">
+            <div class="face front">Eu</div>
+            <div class="face back">Amo</div>
+            <div class="face left">Estudar</div>
+            <div class="face right">GitHub</div>
+            <div class="face top">Dados</div>
+            <div class="face bottom">DevOps</div>
+        </div>
+    </div>
 </main>
 
 <footer>
