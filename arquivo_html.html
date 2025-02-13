@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="png" href="./images/git.png">
     <title>Exemplo de PÃ¡gina HTML</title>
     <style>
         body {
@@ -13,9 +14,24 @@
         }
         header {
             background-color: #4CAF50;
-            color: white;
+            color: #f4f4f9;
             padding: 15px;
             text-align: center;
+        }
+        header ul{
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        header ul li{
+            list-style: none;
+        }
+        .best-group{
+            padding: 10px;
+            border: solid 5px #f4f4f9;
+            border-radius: 15px;
         }
         main {
             padding: 20px;
@@ -90,7 +106,14 @@
 <body>
 
 <header>
-    <h1>Bem-vindo ao Projeto de Pull Request</h1>
+    <ul>
+        <li>
+            <h1 >Bem-vindo ao Projeto de Pull Request</h1>
+        </li>
+        <li class="best-group">
+            <h2><u>Melhor grupo de Devops</u></h2>
+        </li>
+    </ul>
 </header>
 
 <main>
@@ -108,8 +131,7 @@
         </ul>
     </section>
 
-    <button class="btn">Clique aqui para aprender mais!</button>
-
+  <a href="login_page.html" class="btn">Cadastrar</a>
     <!-- Cubo 3D aqui -->
     <div class="container-cubo">
         <div class="cubo">
@@ -121,7 +143,6 @@
             <div class="face bottom">DevOps</div>
         </div>
     </div>
-
 </main>
 
 <footer>
